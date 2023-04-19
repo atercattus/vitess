@@ -135,6 +135,8 @@ func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), waitTime)
 	installSignalHandlers(cancel)
 
+	log.Warningf("AACU main action: %q", action)
+
 	// (TODO:ajm188) <Begin backwards compatibility support>.
 	//
 	// For v12, we are going to support new commands by prefixing as:
